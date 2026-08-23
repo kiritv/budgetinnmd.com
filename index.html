@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="version-switcher.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Budget Inn Upper Marlboro MD | Motel near Showplace Arena</title>
@@ -22,7 +23,7 @@
   <meta name="twitter:image" content="https://www.budgetinnmd.com/assets/images/img-606.jpeg">
 
   <link rel="icon" href="assets/images/unknown-1.jpeg" type="image/x-icon">
-  <link rel="stylesheet" href="index.css?v=13.0">
+  <link rel="stylesheet" href="index.css?v=14.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Schema.org Structured Data for Motel -->
@@ -115,6 +116,13 @@
           <a href="tel:+13016272969" class="btn-book"><i class="fa-solid fa-phone"></i> Call +1-301-627-2969</a>
         </li>
       </ul>
+      <div class="version-switcher-container">
+          <i class="fa-solid fa-sliders" style="color: #60a5fa; font-size: 0.85rem;"></i>
+          <select class="version-switcher-select" onchange="setSiteVersion(this.value)" aria-label="Select Content View">
+            <option value="enhanced">✨ Modern View</option>
+            <option value="classic">🏛️ Classic View</option>
+          </select>
+        </div>
     </nav>
   </header>
 
@@ -122,13 +130,15 @@
   <section class="hero">
     <div class="hero-content">
       <span class="hero-badge"><i class="fa-solid fa-paw"></i> Pet-Friendly &bull; Weekly Rates Available</span>
-      <h1 class="hero-title">Welcome to Budget Inn Upper Marlboro</h1>
+      <h1 class="hero-title"><span class="version-classic">Welcome to Budget Inn Upper Marlboro</span><span class="version-enhanced">Affordable Comfort &amp; Premier Access to Washington D.C.</span></h1>
+      <p class="hero-subtitle version-enhanced" style="margin-bottom: 20px; font-size: 1.1rem; opacity: 0.95; font-weight: 300;">Clean, peaceful, and wallet-friendly accommodations located off I-495 — your ideal budget-friendly home base near Showplace Arena &amp; Joint Base Andrews.</p>
       <div class="hero-actions">
         <a href="tel:+13016272969" class="btn-book" style="padding: 14px 32px; font-size: 0.95rem;">
           <i class="fa-solid fa-phone"></i> Call +1-301-627-2969
         </a>
         <a href="rooms.html" class="btn-secondary">
-          Explore Guest Rooms <i class="fa-solid fa-arrow-right"></i>
+          <span class="version-classic">Explore Guest Rooms <i class="fa-solid fa-arrow-right"></i></span>
+          <span class="version-enhanced">View Available Rooms <i class="fa-solid fa-arrow-right"></i></span>
         </a>
       </div>
     </div>
@@ -173,16 +183,26 @@
     <div class="container">
       <div class="section-title-wrap">
         <span class="section-subtitle">Comfortable &amp; Convenient Stay</span>
-        <h2 class="section-title">Your Home Away From Home in Upper Marlboro</h2>
+        <h2 class="section-title"><span class="version-classic">Your Home Away From Home in Upper Marlboro</span><span class="version-enhanced">Smart Savings Without Sacrificing Comfort or Location</span></h2>
       </div>
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
         <div>
-          <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 20px;">
-            The <strong>Budget Inn motel</strong> is ideally located less than 2 miles from the <strong>Showplace Arena</strong> and right off Interstate 495 in Upper Marlboro, Maryland. Whether you are traveling for business, attending an event, or exploring the historic monuments in Washington D.C., our central location makes traveling effortless.
-          </p>
-          <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 24px;">
-            We offer fresh, clean guest rooms equipped with modern comforts including LED TVs, microwaves, refrigerators, and endless hot water for refreshing showers.
-          </p>
+          <div class="version-classic">
+            <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 20px;">
+              The <strong>Budget Inn motel</strong> is ideally located less than 2 miles from the <strong>Showplace Arena</strong> and right off Interstate 495 in Upper Marlboro, Maryland. Whether you are traveling for business, attending an event, or exploring the historic monuments in Washington D.C., our central location makes traveling effortless.
+            </p>
+            <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 24px;">
+              We offer fresh, clean guest rooms equipped with modern comforts including LED TVs, microwaves, refrigerators, and endless hot water for refreshing showers.
+            </p>
+          </div>
+          <div class="version-enhanced">
+            <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 20px;">
+              <strong>Budget Inn Upper Marlboro</strong> offers smart travelers, military families, and business contractors an unbeatable combination of affordability, spotless cleanliness, and prime highway access off I-495. Located under 2 miles from <strong>Showplace Arena</strong> and minutes from <strong>Joint Base Andrews</strong> and D.C. landmarks, enjoy peaceful nights and warm hospitality.
+            </p>
+            <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 24px;">
+              Our guest rooms are impeccably maintained and equipped with modern comforts including LED cable TVs, microwave &amp; refrigerator units, high-speed Wi-Fi, and endless hot water for a refreshing start to your day.
+            </p>
+          </div>
           <a href="tel:+13016272969" class="btn-book"><i class="fa-solid fa-phone"></i> Call +1-301-627-2969 to Reserve</a>
         </div>
         <div style="border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-lg);">
