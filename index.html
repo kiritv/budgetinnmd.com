@@ -22,7 +22,7 @@
   <meta name="twitter:image" content="https://www.budgetinnmd.com/assets/images/img-606.jpeg">
 
   <link rel="icon" href="assets/images/unknown-1.jpeg" type="image/x-icon">
-  <link rel="stylesheet" href="index.css?v=6.0">
+  <link rel="stylesheet" href="index.css?v=7.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Schema.org Structured Data for Motel -->
@@ -78,7 +78,7 @@
       <a href="https://maps.google.com/?q=4111+Crain+Hwy,+Upper+Marlboro,+MD+20772" target="_blank">
         <i class="fa-solid fa-location-dot"></i> 4111 Crain Hwy, Upper Marlboro, MD 20772
       </a>
-      <a href="tel:+13016272969" class="header-phone-btn">
+      <a href="tel:+13016272969">
         <i class="fa-solid fa-phone"></i> +1 (301) 627-2969
       </a>
       <a href="mailto:budgetinnuppermarlboro@gmail.com">
@@ -102,18 +102,15 @@
           <p>Upper Marlboro, MD</p>
         </div>
       </a>
-      <button class="mobile-nav-toggle" id="mobileToggle" onclick="toggleMobileNav(event)" ontouchstart="toggleMobileNav(event)" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
+      <button class="mobile-nav-toggle" id="mobileToggle" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
       <ul class="nav-menu" id="navMenu">
         <li><a href="index.html" class="nav-link active">Home</a></li>
         <li><a href="rooms.html" class="nav-link">Rooms</a></li>
         <li><a href="attractions.html" class="nav-link">Attractions</a></li>
         <li><a href="dining.html" class="nav-link">Dining</a></li>
         <li><a href="contactus.html" class="nav-link">Contact Us</a></li>
-        <li>
-          <a href="tel:+13016272969" class="nav-phone-btn">
-            <i class="fa-solid fa-phone"></i> (301) 627-2969
-          </a>
-        </li>
         <li>
           <a href="https://live.ipms247.com/booking/book-rooms-budgetinnuppermarlboro" target="_blank" class="btn-book">
             <i class="fa-solid fa-calendar-check"></i> Book Now
@@ -123,11 +120,12 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero Banner -->
   <section class="hero">
     <div class="hero-content">
       <span class="hero-badge"><i class="fa-solid fa-paw"></i> Pet-Friendly &bull; Weekly Rates Available</span>
       <h1 class="hero-title">Welcome to Budget Inn Upper Marlboro</h1>
+      <p class="hero-subtitle">Ideally located less than 2 miles from Showplace Arena &amp; minutes from and Downtown Washington D.C.</p>
       <div class="hero-actions">
         <a href="https://live.ipms247.com/booking/book-rooms-budgetinnuppermarlboro" target="_blank" class="btn-book" style="padding: 14px 32px; font-size: 0.95rem;">
           <i class="fa-solid fa-calendar-days"></i> Reserve Your Room Online
@@ -417,46 +415,13 @@
     </a>
   </div>
 
-  
-
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var btn = document.getElementById('mobileToggle');
-      var menu = document.getElementById('navMenu');
-      if (btn && menu) {
-        btn.addEventListener('click', function(e) {
-          menu.classList.toggle('active');
-        });
-      }
-      document.querySelectorAll('.copyright-year').forEach(function(el) {
-        el.textContent = new Date().getFullYear();
-      });
+    document.getElementById('mobileToggle').addEventListener('click', function() {
+      document.getElementById('navMenu').classList.toggle('active');
     });
   </script>
-  
-  <script>
-    var lastToggleTime = 0;
-    function toggleMobileNav(e) {
-      var now = Date.now();
-      if (now - lastToggleTime < 350) {
-        if (e && e.preventDefault) e.preventDefault();
-        return false;
-      }
-      lastToggleTime = now;
-      if (e && e.preventDefault) e.preventDefault();
-      var menu = document.getElementById('navMenu');
-      if (menu) {
-        var isHidden = getComputedStyle(menu).display === 'none';
-        if (isHidden) {
-          menu.style.setProperty('display', 'flex', 'important');
-          menu.classList.add('active');
-        } else {
-          menu.style.setProperty('display', 'none', 'important');
-          menu.classList.remove('active');
-        }
-      }
-      return false;
-    }
+<script>
+    document.querySelectorAll('.copyright-year').forEach(el => el.textContent = new Date().getFullYear());
   </script>
 </body>
 </html>
